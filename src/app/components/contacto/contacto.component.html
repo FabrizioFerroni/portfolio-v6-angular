@@ -1,0 +1,70 @@
+<section id="contactame" class="page-section">
+    <div>
+        <h2>Contactate conmigo</h2>
+        <h3 class="contactame__title">¿Satisfecho conmigo?</h3>
+        <h3 class="contactame__subtitle">
+            Por favor póngase en contacto conmigo
+        </h3>
+        <div>
+
+            <a href="mailto:hola@fabriziodev.ar" data-tts="up" aria-label="Enviame un email">
+                <!-- <ion-icon class="icon__rrss" name="mail"></ion-icon> -->
+                <i class="icon__rrss uil uil-envelopes"></i>
+            </a>
+            <a href="https://github.com/FabrizioFerroni" data-tts="up" aria-label="Mira mis proyectos en github" rel="nofollow noopener noreferrer" target="_blank">
+                <!-- <ion-icon class="icon__rrss" name="logo-github"></ion-icon> -->
+                <i class="icon__rrss uil uil-github"></i>
+
+            </a>
+            <a href="https://www.linkedin.com/in/fabrizio-ferroni/" rel="nofollow noopener noreferrer" data-tts="up" aria-label="Seguime en linkedin">
+                <!-- <ion-icon class="icon__rrss" name="logo-linkedin"></ion-icon> -->
+                <i class="icon__rrss uil uil-linkedin"></i>
+
+            </a>
+        </div>
+    </div>
+    <div>
+        <h3 class="contactame__form__title">
+            Contáctame, hagamos magia juntos
+        </h3>
+        <form action="/" method="POST" id="form">
+            <div class="fake_placeholder">
+                <label>
+                  <span>Nombre:</span>
+                  <input type="text" id="frm__nombre" class="input__pl" name="nombre" autocapitalize="words" autocomplete="off" placeholder="Ingrese su nombre y apellido"/>
+              </label>
+            </div>
+            <div class="fake_placeholder">
+                <label>
+                  <span>Email:</span>
+                  <input type="email" id="frm__email" class="input__pl" name="email" autocapitalize="words" autocomplete="off" placeholder="Ingrese su email"/>
+              </label>
+            </div>
+            <div class="fake_placeholder">
+                <label>
+                  <span>Telefono:</span>
+                  <input type="tel"  onkeypress='return validaNumericos(event)' maxlength="20" id="frm__telefono" class="input__pl" name="telefono" autocapitalize="words" autocomplete="off" min="0" placeholder="Ingrese su número de telefono"/>
+              </label>
+            </div>
+            <div class="fake_placeholder">
+                <label>
+                  <span >Asunto:</span>
+                  <!-- <input type="text" name="asunto" autocapitalize="words" autocomplete="off" /> -->
+                  <select class="select-pd" id="frm__asunto" name="asunto" id="test__select">
+                      <option class="hidden" value="" selected disabled>Seleccione una opción</option>
+                      <option value="prueba">Prueba</option>
+                  </select>
+              </label>
+            </div>
+            <div class="fake_placeholder">
+                <label>
+                  <span class="textarea">Mensaje:</span>
+                  <textarea name="mensaje" class="textarea__pl" id="frm__mensaje" cols="20" rows="10" placeholder="Ingrese su mensaje"></textarea>
+              </label>
+            </div>
+            <div>
+                <button class="outnone" type="submit">Enviar <i class="contactame__icon uil uil-message"></i> <!--<ion-icon name="send" class="contactame__icon"></ion-icon>--></button>
+            </div>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,1330 @@
+/* ESTILOS PARA DESKTOP */
+
+:root {
+    --body: #180000;
+    --white: #ffffff;
+    --light-color: #f5f5f5;
+    --low-priority: #918181;
+    --primary-color: #c42729;
+    --secondary-color: #db3739;
+    --dark-color: #360000;
+    --cards: rgba(189, 189, 189, 0.45);
+    --card-proyectos: #3D0404;
+    --form-input: #301B1B;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.opacity-40 {
+    opacity: 40%;
+}
+
+.desktop {
+    display: block;
+}
+
+.movil {
+    display: none;
+}
+
+.outnone {
+    outline: none !important;
+    box-shadow: 0 0 0 0 transparent !important;
+}
+
+.swiper {
+    padding-bottom: 1rem !important;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet .swiper-pagination-bullet-active {
+    background-color: var(--primary-color);
+    margin-top: 2.8125rem;
+}
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+    color: var(--primary-color);
+}
+
+.swiper-pagination {
+    position: relative !important;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    /* bottom: 0rem !important; */
+    bottom: -0.625rem !important;
+}
+
+
+/*Flecha para hacer la pagina hacia arriba*/
+
+.ir-arriba {
+    display: none;
+    background-repeat: no-repeat;
+    font-size: 1.5625rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    position: fixed;
+    bottom: 0.625rem;
+    right: 0.625rem;
+    z-index: 1000;
+    padding: 0.1rem 0.5rem;
+}
+
+.ir-arriba:hover,
+.ir-arriba:focus {
+    background-color: var(--secondary-color);
+}
+
+.fa-stack {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+
+/* SWEETALERT2 */
+
+.swal2-title,
+.swal2-html-container {
+    color: var(--light-color) !important;
+}
+
+
+/*SCROLL SOLO PARA CHROME*/
+
+ ::-webkit-scrollbar {
+    /* background: #fff;*/
+    width: 0.4375rem;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    height: 0.3125rem;
+    border-radius: 3.125rem;
+}
+
+ ::-webkit-scrollbar-thumb:active {
+    background: var(--secondary-color);
+    /* 797676*/
+    /* background: #d10014; 797676 */
+}
+
+ ::-webkit-scrollbar-track {
+    background: var(--body);
+    /* background: #fff; */
+}
+
+
+/*SELECT*/
+
+::-webkit-selection {
+    color: var(--low-priority);
+    background: transparent;
+    font-weight: bold;
+    /* color: var(--primary-color);
+    background: var(--body); */
+    /*00ADB5*/
+}
+
+ ::-moz-selection {
+    color: var(--low-priority);
+    background: transparent;
+    font-weight: bold;
+    /* color: var(--primary-color);
+    background: var(--body); */
+}
+
+ ::selection {
+    color: var(--low-priority);
+    background: transparent;
+    font-weight: bold;
+    /* color: var(--primary-color); */
+    /* background: var(--body); */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.material-symbols-sharp {
+    font-variation-settings: 'FILL' 1, 'GRAD' 0, 'opsz' 20
+}
+
+body {
+    background-color: var(--body);
+    color: var(--white);
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    background-color: var(--dark-color);
+    display: flex;
+    padding: 1.1875rem 8.5rem;
+    /* padding: 19px 160px 19px 160px; */
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav .nav__title h3 {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+nav .nav__menu ul {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+nav .nav__menu ul li {
+    padding: 0rem 0.9375rem;
+}
+
+nav .nav__menu ul li a {
+    color: var(--white);
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.6875rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .nav__menu ul li a .icon__menu {
+    padding-right: 0.3125rem;
+}
+
+nav .nav__menu ul li a.active,
+nav .nav__menu ul li a:hover {
+    color: var(--secondary-color);
+}
+
+nav .nav__menu ul li a img {
+    display: flex;
+}
+
+.container {
+    padding: 5.625rem 8.5rem;
+}
+
+#inicio {
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: center; */
+    align-items: center;
+    /* margin-bottom: 128px; */
+    /* padding-top: 107px; */
+    padding-top: 3.75rem;
+}
+
+#inicio h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+#inicio h1 {
+    margin-top: 6px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.25rem;
+    line-height: 4.875rem;
+}
+
+#inicio p {
+    margin-top: 0.75rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+}
+
+#inicio a {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.75rem 1.5625rem;
+    gap: 0.375rem;
+    border-radius: 0.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+#inicio .buttons__inicio {
+    margin-top: 3.5rem;
+}
+
+#inicio .btn-quien-soy {
+    margin-right: 1.9375rem;
+    /* height: 3.2475rem; */
+    background: var(--primary-color);
+    border: 0.0625rem solid var(--primary-color);
+}
+
+#inicio .btn-mi-cv {
+    border: 0.125rem solid var(--primary-color);
+    background-color: transparent;
+}
+
+#inicio .btn-quien-soy:hover {
+    /* border: 1px solid var(--primary-color);
+    background-color: transparent; */
+    /* background-color: var(--white);
+    color: var(--primary-color);
+    border: 1px solid var(--white); */
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: 0.0625rem solid var(--secondary-color);
+}
+
+#inicio .btn-mi-cv:hover {
+    /* background: var(--primary-color);
+    border: 2px solid var(--primary-color); */
+    border: 0.125rem solid var(--white);
+    color: var(--primary-color);
+}
+
+#quien-soy {
+    padding-top: 8rem;
+}
+
+#quien-soy .quien-soy__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: var(--primary-color);
+}
+
+#quien-soy .quien-soy__descripcion {
+    margin-top: 0.5rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    hyphens: auto;
+    text-align: justify;
+}
+
+#quien-soy .quien-soy__years {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+#quien-soy .quien-soy__years h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 6rem;
+    line-height: 9rem;
+    color: var(--primary-color);
+    padding-right: 3.125rem;
+}
+
+#quien-soy .quien-soy__years h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    text-align: justify;
+}
+
+#quien-soy .quien-soy__cards {
+    display: flex;
+    margin-top: 1.1875rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#quien-soy .quien-soy__cards .cards:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+#quien-soy .quien-soy__cards .cards:first-child:hover {
+    background-color: var(--cards);
+}
+
+#quien-soy .quien-soy__cards .cards {
+    width: 16rem;
+    height: 15.875rem;
+    background: var(--cards);
+    margin-right: 1.0625rem;
+}
+
+#quien-soy .quien-soy__cards .cards:last-child {
+    margin-right: 0rem;
+}
+
+#quien-soy .quien-soy__cards .cards:first-child {
+    background-color: var(--primary-color);
+}
+
+#quien-soy .quien-soy__cards .cards h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    /* line-height: 36px; */
+    /* padding: 153px 101px 24px 24px; */
+    /* position: absolute;
+    word-wrap: break-word; */
+    padding: 9.5625rem 2.5rem 1.5rem 1.5rem;
+    position: relative;
+    word-wrap: break-word;
+}
+
+#quien-soy .quien-soy__cards .cards img {
+    /* width: 42px;
+    height: 42px; */
+    padding: 6.0625rem 11.875rem 7.1875rem 1.5rem;
+    position: absolute;
+    cursor: pointer;
+}
+
+#quien-soy .quien-soy__cards .cards img:first-child {
+    filter: invert();
+}
+
+#quien-soy .quien-soy__services .h2__title {
+    margin-top: 5rem;
+    color: var(--primary-color);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+#quien-soy .quien-soy__services .quien-soy__cards__services {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2.1875rem;
+}
+
+#quien-soy .quien-soy__services .quien-soy__cards__services .cards {
+    width: 21.1875rem;
+    height: 21.125rem;
+    border: 0.1875rem solid #F5F5F5;
+    filter: drop-shadow(0rem 0.125rem 0.25rem rgba(0, 0, 0, 0.2));
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    ;
+}
+
+#quien-soy .quien-soy__services .quien-soy__cards__services .cards:nth-child(odd) {
+    border: 0.1875rem solid var(--primary-color);
+}
+
+#quien-soy .quien-soy__services .quien-soy__cards__services .cards img {
+    width: 3rem;
+    height: 3rem;
+}
+
+#quien-soy .quien-soy__services .quien-soy__cards__services .cards h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 185%;
+    color: var(--white);
+}
+
+#quien-soy .quien-soy__services .quien-soy__cards__services .cards:nth-child(even) h2 {
+    color: var(--primary-color);
+}
+
+#quien-soy .quien-soy__services .quien-soy__cards__services .cards p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.0625rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+#proyectos .proyectos__title {
+    padding-top: 8rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: var(--primary-color);
+}
+
+#proyectos .proyectos__description {
+    padding-top: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 2rem;
+}
+
+#proyectos .proyectos__cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    gap: 0.625rem;
+    padding-top: 2.25rem;
+}
+
+#proyectos .proyectos__cards .cards {
+    width: 21.4375rem;
+    height: 26.875rem;
+    background: var(--card-proyectos);
+    box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#proyectos .proyectos__cards .cards h2 {
+    color: var(--primary-color);
+    padding-left: 1rem;
+    padding-top: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+}
+
+#proyectos .proyectos__cards .cards p {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+    font-style: normal;
+    font-weight: 500;
+    padding-left: 1.0625rem;
+    padding-right: 1.0625rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+#proyectos .proyectos__cards img {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0rem;
+    margin-bottom: 0rem;
+}
+
+#proyectos .proyectos__cards .cards .proyectos__update {
+    font-size: 0.75rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    color: var(--low-priority);
+}
+
+#proyectos .proyectos__cards .cards .proyectos__update .privado {
+    font-size: 0.75rem;
+    color: var(--primary-color);
+}
+
+#proyectos .proyectos__cards .cards .proyectos__update .publico {
+    color: green;
+}
+
+#proyectos .proyectos__cards .cards .proyectos__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.75rem;
+    gap: 0.375rem;
+}
+
+#proyectos .proyectos__cards .cards .proyectos__buttons .live-btn {
+    margin-right: 1.125rem;
+    width: 9.0625rem;
+    height: 2.6875rem;
+    background-color: var(--primary-color);
+    border: 0.0625rem solid var(--primary-color);
+    color: var(--white);
+    border-radius: 0.5rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#proyectos .proyectos__cards .cards .proyectos__buttons .github-btn {
+    width: 9rem;
+    height: 2.6875rem;
+    border: 0.125rem solid var(--primary-color);
+    background-color: transparent;
+    border-radius: 0.5rem;
+    color: var(--white);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#proyectos .proyectos__cards .cards .proyectos__buttons .live-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: 0.0625rem solid var(--secondary-color);
+}
+
+#proyectos .proyectos__cards .cards .proyectos__buttons .github-btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 0.125rem solid var(--white);
+}
+
+#proyectos .proyectos__cards .cards .proyectos__buttons .icon__proyectos__btn {
+    padding-left: 0.3125rem;
+}
+
+#proyectos .mas__proyectos {
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.125rem;
+}
+
+#proyectos .mas__proyectos a {
+    padding: 0.625rem;
+    margin-top: 1.5rem;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: var(--white);
+    border-radius: 0.5rem;
+    font-style: normal;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-items: center;
+}
+
+#proyectos .mas__proyectos a:hover {
+    /* background-color: var(--white);
+    border: 1px solid var(--white);
+    color: var(--primary-color); */
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: 0.0625rem solid var(--secondary-color);
+}
+
+#proyectos .mas__proyectos a .icon__proyetos {
+    padding-left: 0.625rem;
+    font-size: 1.875rem;
+}
+
+#contactame {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 8rem;
+}
+
+#contactame h2 {
+    color: var(--primary-color);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+#contactame .contactame__title {
+    padding-top: 16px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+}
+
+#contactame .contactame__subtitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+}
+
+#contactame a .icon__rrss {
+    padding-top: 0.375rem;
+    color: var(--primary-color);
+    font-size: 1.875rem;
+}
+
+#contactame a .icon__rrss:hover {
+    color: var(--secondary-color);
+    /* transform: rotateY(180deg); */
+}
+
+#contactame a {
+    margin-right: 1rem;
+}
+
+#contactame a:last-child {
+    padding-right: 0rem;
+}
+
+#contactame .contactame__form__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+}
+
+#contactame form {
+    padding-top: 1.5rem;
+}
+
+#contactame form input,
+#contactame form select,
+#contactame form textarea,
+#contactame form span {
+    border: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    outline: none;
+    padding: 0;
+    resize: none;
+    width: 29.5rem;
+    height: 3.875rem;
+    background: transparent;
+    color: var(--white);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#contactame form select option.hidden {
+    display: none;
+}
+
+#contactame form textarea {
+    width: 29.5rem;
+    height: 6.125rem;
+    padding-top: 0.9375rem;
+}
+
+#contactame form .fake_placeholder {
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.625rem;
+    background: var(--form-input);
+    border: 0.0625rem solid var(--form-input);
+}
+
+#contactame form .fake_placeholder:first-child {
+    margin-top: 0rem;
+}
+
+
+/* el label emula el aspecto del input */
+
+#contactame form .fake_placeholder label {
+    border: 0rem solid var(--white);
+    display: inline-block;
+    padding: 0.3125rem;
+    position: relative;
+}
+
+#contactame form .fake_placeholder span {
+    color: var(--white);
+    display: inline-block;
+    left: 0.125rem;
+    padding: 0.3125rem;
+    position: absolute;
+    transition: 0.25s;
+    top: 1.1875rem;
+    left: 1rem;
+    width: auto;
+    opacity: 50%;
+}
+
+#contactame form .fake_placeholder span.reubicar {
+    color: var(--primary-color);
+    font-size: 1rem;
+    top: -0.3125rem;
+    opacity: 100%;
+}
+
+#contactame form .fake_placeholder span.reubicar:focus {
+    color: var(--white);
+}
+
+#contactame form .fake_placeholder span.textarea {
+    top: 2.3125rem;
+}
+
+#contactame form .fake_placeholder select option {
+    width: 15rem;
+    height: 2.125rem;
+    overflow: hidden;
+    background: var(--form-input);
+    border: 0.0625rem solid var(--form-input);
+    border-radius: 0.5rem;
+}
+
+#contactame form .fake_placeholder select option::selection {
+    background-color: var(--primary-color);
+}
+
+
+/* #contactame form .fake_placeholder span.select {
+    top: -5px;
+} */
+
+#contactame form .fake_placeholder select.select-pd,
+#contactame form .fake_placeholder input.input__pl {
+    padding-left: 6.25rem;
+}
+
+#contactame form .fake_placeholder textarea.textarea__pl {
+    padding-left: 6.25rem;
+    padding-top: 2.3125rem;
+}
+
+#contactame form input:-webkit-autofill,
+#contactame form input:-webkit-autofill:hover,
+#contactame form input:-webkit-autofill:focus,
+#contactame form input:-webkit-autofill,
+#contactame form input:-webkit-autofill:hover,
+#contactame form input:-webkit-autofill:focus,
+#contactame form input:-webkit-autofill,
+#contactame form input:-webkit-autofill:hover,
+#contactame form input:-webkit-autofill:focus {
+    border: 0.0625rem solid var(--form-input);
+    -webkit-text-fill-color: var(--white);
+    transition: background-color 100000s ease-in-out 0s;
+}
+
+#contactame form textarea:-webkit-autofill,
+#contactame form textarea:-webkit-autofill:hover,
+#contactame form textarea:-webkit-autofill:focus,
+#contactame form textarea:-webkit-autofill,
+#contactame form textarea:-webkit-autofill:hover,
+#contactame form textarea:-webkit-autofill:focus,
+#contactame form textarea:-webkit-autofill,
+#contactame form textarea:-webkit-autofill:hover,
+#contactame form textarea:-webkit-autofill:focus {
+    border: 0.0625rem solid var(--form-input);
+    color: var(--white);
+    -webkit-text-fill-color: var(--white);
+    transition: background-color 100000s ease-in-out 0s;
+}
+
+#contactame form select:-webkit-autofill,
+#contactame form select:-webkit-autofill:hover,
+#contactame form select:-webkit-autofill:focus,
+#contactame form select:-webkit-autofill,
+#contactame form select:-webkit-autofill:hover,
+#contactame form select:-webkit-autofill:focus,
+#contactame form select:-webkit-autofill,
+#contactame form select:-webkit-autofill:hover,
+#contactame form select:-webkit-autofill:focus {
+    color: var(--white);
+    border: 0.0625rem solid var(--form-input);
+    -webkit-text-fill-color: var(--white);
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 50%;
+}
+
+#contactame form button {
+    background: var(--primary-color);
+    border: 0.0625rem solid var(--primary-color);
+    border-radius: 0.5rem;
+    width: 10.875rem;
+    height: 3.125rem;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+#contactame form button .contactame__icon {
+    padding-left: 0.625rem;
+}
+
+#contactame form button:hover {
+    /* background: var(--white);
+    border: 1px solid var(--white);
+    color: var(--primary-color); */
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: 0.0625rem solid var(--secondary-color);
+}
+
+footer {
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: nowrap; */
+    /* align-content: center; */
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 1.1875rem 8.5rem;
+}
+
+footer h4 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5rem;
+    color: var(--white);
+    opacity: 50%;
+}
+
+footer .rrss__footer {
+    padding-top: 0.9375rem;
+}
+
+footer .rrss__footer a {
+    margin-right: 0.5rem;
+}
+
+footer .rrss__footer a:hover {
+    color: var(--secondary-color);
+}
+
+footer .enlaces__footer {
+    display: flex;
+    /* align-items: center; */
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+footer .enlaces__footer .otros__links {
+    padding-right: 1.0625rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--white);
+    opacity: 50%;
+}
+
+footer .enlaces__footer .otros__links:hover {
+    color: var(--primary-color);
+}
+
+footer .enlaces__footer p {
+    color: var(--white);
+    opacity: 50%;
+}
+
+footer .enlaces__footer p>a:hover {
+    color: var(--primary-color);
+}
+
+footer .icon__footer {
+    font-size: 1.875rem;
+    color: var(--primary-color);
+}
+
+@media (min-width: 1920px) {
+    /* @media (min-width: 1400px) and (max-width: 1920px) { */
+    .container {
+        padding: 5.625rem 18.75rem;
+    }
+    nav {
+        padding: 1.1875rem 18.75rem;
+    }
+    #quien-soy .quien-soy__services .quien-soy__cards__services {
+        gap: 2.1875rem;
+    }
+    #proyectos .proyectos__cards {
+        justify-content: space-around;
+        gap: 0rem;
+    }
+    #proyectos .proyectos__cards .cards {
+        width: 21.875rem;
+    }
+    footer {
+        padding: 1.1875rem 18.75rem;
+    }
+}
+
+@media (min-width: 1536px) and (max-width: 1919px) {
+    /* @media (min-width: 1400px) and (max-width: 1920px) and (orientation: landscape) { */
+    /* @media (min-width: 1400px) and (max-width: 1920px) and (orientation: landscape) { */
+    .container {
+        padding: 5.625rem 12.5rem;
+    }
+    nav {
+        padding: 1.1875rem 12.5rem;
+    }
+    /* #quien-soy .quien-soy__services .quien-soy__cards__services {
+         gap: 35px; 
+    } 
+    */
+    #proyectos .proyectos__cards {
+        justify-content: space-around;
+        gap: 0rem;
+    }
+    #proyectos .proyectos__cards .cards {
+        width: 21.875rem;
+    }
+    footer {
+        padding: 1.1875rem 12.5rem;
+    }
+}
+
+@media (max-width: 1366px) and (orientation: landscape) {
+    #quien-soy .quien-soy__services .quien-soy__cards__services {
+        gap: 2.1875rem;
+    }
+    #quien-soy .quien-soy__services .quien-soy__cards__services .cards {
+        width: 19.375rem;
+        height: 19.375rem;
+    }
+    #proyectos .proyectos__cards {
+        justify-content: space-evenly;
+        gap: 0rem;
+    }
+    #proyectos .proyectos__cards .cards {
+        width: 21.875rem;
+    }
+    /* #proyectos .proyectos__cards .cards:last-child {
+        display: none;
+    } */
+}
+
+@media (max-width: 1366px) {
+    #quien-soy .quien-soy__cards .cards {
+        height: 17.5rem;
+    }
+    #quien-soy .quien-soy__services .quien-soy__cards__services {
+        gap: 2.1875rem;
+    }
+    #quien-soy .quien-soy__services .quien-soy__cards__services .cards {
+        width: 19.375rem;
+        height: 19.375rem;
+    }
+    #proyectos .proyectos__cards {
+        justify-content: space-evenly;
+        gap: 0rem;
+    }
+    #proyectos .proyectos__cards .cards {
+        width: 21.875rem;
+    }
+    /* #proyectos .proyectos__cards .cards:last-child {
+        display: none;
+    } */
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    nav,
+    .container,
+    footer {
+        padding: 1.1875rem 1.875rem;
+    }
+    #quien-soy .quien-soy__cards .cards {
+        height: auto;
+        /* height: 340px; */
+    }
+    #quien-soy .quien-soy__cards .cards:last-child {
+        margin-right: 1rem;
+    }
+    #quien-soy .quien-soy__services .quien-soy__cards__services {
+        gap: 1.5625rem;
+        justify-content: space-evenly;
+    }
+    #quien-soy .quien-soy__services .quien-soy__cards__services .cards {
+        width: 18.75rem;
+        height: 18.75rem;
+    }
+    #quien-soy .quien-soy__cards {
+        display: grid;
+        margin-top: 1.1875rem;
+        /* align-items: center; */
+        justify-content: center;
+        grid-template-columns: 33% 25%;
+        /* grid-template-rows: 1fr 1fr; */
+        justify-items: center;
+        row-gap: 1.25rem;
+        align-content: center;
+        /* margin-right: 397px; */
+    }
+}
+
+@media (min-width: 877px) and (max-width: 1023px) {
+    nav {
+        padding: 1.1875rem 2.5rem;
+    }
+    .container {
+        padding: 1.1875rem 2.5rem;
+    }
+    footer {
+        padding: 1.1875rem 2.5rem;
+    }
+    nav .nav__title h3 {
+        font-size: 1.25rem;
+    }
+    nav .nav__menu ul li a {
+        font-size: 1rem;
+        line-height: 1.5625rem;
+    }
+    #inicio img {
+        width: 100%;
+    }
+    #inicio .btn-quien-soy {
+        margin-right: 0.625rem;
+        height: auto;
+    }
+    #quien-soy .quien-soy__cards {
+        display: grid;
+        margin-top: 1.1875rem;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        grid-template-columns: 30% 30%;
+        gap: 1.25rem;
+    }
+    #quien-soy .quien-soy__cards .cards {
+        margin-right: 0rem;
+    }
+    #quien-soy .quien-soy__services .h2__title {
+        text-align: center;
+    }
+    #quien-soy .quien-soy__services .quien-soy__cards__services {
+        margin-top: 2rem;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 33% 41%;
+        row-gap: 1.25rem;
+    }
+    #quien-soy .quien-soy__services .quien-soy__cards__services .cards {
+        padding: 0.625rem;
+    }
+    #quien-soy .quien-soy__services .quien-soy__cards__services .cards:nth-child(odd) {
+        border: 0.1875rem solid var(--white);
+    }
+    #quien-soy .quien-soy__services .quien-soy__cards__services .cards:nth-child(odd) h2 {
+        color: var(--primary-color);
+    }
+    #quien-soy .quien-soy__services .quien-soy__cards__services .cards h2 {
+        word-break: break-word;
+        text-align: center;
+    }
+}
+
+@media (max-width: 876px) {
+    nav {
+        padding: 1.1875rem 1.875rem;
+    }
+    .container {
+        padding: 1.1875rem 1.875rem;
+    }
+    footer {
+        padding: 1.1875rem 1.875rem;
+        display: block;
+        text-align: center;
+    }
+    nav .nav__title h3 {
+        font-size: 0.9375rem;
+    }
+    nav .nav__menu ul li a {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+    #inicio .btn-quien-soy {
+        margin-right: 1.5625rem;
+        height: auto;
+    }
+    #inicio img {
+        width: 100%;
+    }
+    #inicio h3 {
+        font-size: 1.875rem;
+    }
+    #inicio h1 {
+        font-size: 2.8125rem;
+    }
+    #quien-soy .quien-soy__title {
+        font-size: 1.75rem;
+    }
+    #quien-soy .quien-soy__descripcion {
+        font-size: 0.9375rem;
+    }
+    #quien-soy .quien-soy__years h1 {
+        font-size: 3.75rem;
+    }
+    #quien-soy .quien-soy__years h2 {
+        font-size: 0.9375rem;
+    }
+    #quien-soy .quien-soy__cards {
+        display: grid;
+        margin-top: 1.1875rem;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        grid-template-columns: 40% 33%;
+        gap: 1.25rem;
+    }
+    #quien-soy .quien-soy__cards .cards {
+        margin-right: 0rem;
+    }
+    #quien-soy .quien-soy__services .h2__title {
+        /* text-align: center; */
+        font-size: 1.75rem;
+    }
+    #quien-soy .quien-soy__services .quien-soy__cards__services {
+        gap: 1.25rem 0rem;
+    }
+    #quien-soy .quien-soy__services .quien-soy__cards__services .cards {
+        padding: 0.625rem;
+    }
+    #quien-soy .quien-soy__services .quien-soy__cards__services .cards h2 {
+        word-break: break-word;
+        text-align: center;
+    }
+    #quien-soy .quien-soy__services .quien-soy__cards__services .cards:nth-child(odd) {
+        border: 0.1875rem solid var(--white);
+    }
+    #quien-soy .quien-soy__services .quien-soy__cards__services .cards:nth-child(odd) h2 {
+        color: var(--primary-color);
+    }
+    #proyectos .proyectos__title {
+        font-size: 1.75rem;
+    }
+    #proyectos .proyectos__description {
+        font-size: 0.9375rem;
+    }
+    #proyectos .proyectos__cards .cards h2 {
+        font-size: 1.25rem;
+    }
+    #proyectos .proyectos__cards .cards p {
+        font-size: 0.8125rem;
+    }
+    #contactame {
+        display: block;
+    }
+    #contactame .contactame__title {
+        padding-top: 0.625rem;
+    }
+    #contactame .contactame__form__title {
+        padding-top: 0.625rem;
+    }
+    footer .enlaces__footer {
+        padding-top: 0.9375rem;
+    }
+}
+
+@media(width:768px) and (resolution: 163dpi) and(heigth: 1024px) and (orientation: portrait) {
+    #quien-soy .quien-soy__cards {
+        display: grid;
+        margin-top: 1.1875rem;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        grid-template-columns: 45% 55% !important;
+        gap: 1.25rem;
+    }
+}
+
+@media(min-width: 2068px) and (max-width: 2196px) {
+    nav {
+        padding: 1.1875rem 22.75rem;
+    }
+    .container {
+        padding: 5.625rem 22.75rem;
+    }
+    footer {
+        padding: 1.1875rem 22.75rem;
+    }
+}
+
+@media(min-width: 2196px) and (max-width: 3000px) {
+    nav {
+        padding: 1.1875rem 35rem;
+    }
+    .container {
+        padding: 5.625rem 35rem;
+    }
+    footer {
+        padding: 1.1875rem 35rem;
+    }
+}
