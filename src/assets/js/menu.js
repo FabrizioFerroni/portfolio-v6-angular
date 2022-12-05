@@ -31,3 +31,15 @@ $(window).scroll(function() {
         }
     });
 }).scroll();
+
+const h_inicio = document.getElementById("home");
+const logo = document.getElementById("logo");
+
+h_inicio.addEventListener('click', goToTop);
+logo.addEventListener('click', goToTop);
+
+function goToTop() {
+    $('body,html').animate({
+        scrollTop: 0
+    });
+}

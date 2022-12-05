@@ -557,7 +557,7 @@ nav .nav__menu ul li a img {
     font-weight: 500;
     padding-left: 1.0625rem;
     padding-right: 1.0625rem;
-    text-align: justify;
+    text-align: left;
     hyphens: auto;
 }
 

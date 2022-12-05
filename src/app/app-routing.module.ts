@@ -10,9 +10,9 @@ const routes: Routes = [
 
 
   { path: '', component: HomeComponent },
-  { path: '#quien-soy', component: QuienSoyComponent },
-  { path: '#proyectos', component: ProyectosComponent },
-  { path: '#contactame', component: ContactoComponent },
+  { path: 'quien-soy', component: QuienSoyComponent },
+  { path: 'proyectos', component: ProyectosComponent },
+  { path: 'contactame', component: ContactoComponent },
 
   // { path: 'error', component: ErrorComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }
@@ -24,5 +24,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-// export const routing: ModuleWithProviders<any> = RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' });
+export const routing: ModuleWithProviders<any> = RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' });
 

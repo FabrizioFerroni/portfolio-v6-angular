@@ -1,0 +1,4 @@
+#contactame a:hover {
+    color: var(--secondary-color);
+    /* transform: rotateY(180deg); */
+}
